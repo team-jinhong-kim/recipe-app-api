@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  app:
+    build:
+      context: . #current directory
+    ports:
+      - "8000:8000" #8000 for host 8000 for image
+    volumes:
+      - ./app:/app # mount ./app to /app in the container
+    #command run django development server at host 0.0.0.0 with port 8000
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"
