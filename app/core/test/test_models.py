@@ -7,7 +7,8 @@ class ModelTest(TestCase):
         """Test creating a new user with an email is successful"""
         email = 'test@email.com'
         password = 'Testpass123'
-        # usermodel 을 가져온다. user 모델의 objects 는 UserManager(BaseUserManager) 이다. (core/models.py)
+        # usermodel 을 가져온다. user 모델의 objects 는
+        # UserManager(BaseUserManager) 이다. (core/models.py)
         user = get_user_model().objects.create_user(
             email=email,
             password=password
